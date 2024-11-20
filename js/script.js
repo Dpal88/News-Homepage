@@ -31,7 +31,8 @@ function closeMobileMenu() {
     
     main.removeAttribute('inert');
     // unlocks scrolling when menu is closed
-    bodyScrollLockUpgrade.enableBodyScroll(body);
+    // getting erorr
+    // bodyScrollLockUpgrade.enableBodyScroll(body);
     // when keyboard is used to close menu, focus on btnOpen button.
     btnOpen.focus();
 
@@ -58,9 +59,9 @@ function setupTopNav(e) {
         // is tablet/dekstop
         console.log('is desktop');
 
-        topNavMenu.removeAttribute('inert');
         // automatically close menu if it's open when you switch from mobile to desktop
         closeMobileMenu();
+        topNavMenu.removeAttribute('inert');
     }
 }
 
@@ -73,6 +74,6 @@ btnClose.addEventListener('click', closeMobileMenu);
 // if media changes from true to false or vice versa 
 // (is under 48em and goes above, or is above and goes under 48em)
 // then run setupTopNav function and pass event as argument
-media.addEventListener('change', function (e) {
+media.addEventListener('change', function(e) {
     setupTopNav(e);
 })
