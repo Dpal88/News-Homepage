@@ -9,6 +9,12 @@
     --very-dark-blue: hsl(240, 100%, 5%);
 }
 
+/*-------- FONTS --------*/
+@font-face {
+    font-family: 'inter';
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
 /*-------- RESET --------*/
 *,
 *::before,
@@ -18,6 +24,10 @@
 * {
     margin: 0;
     padding: 0;
+}
+body {
+    background: var(--off-white);
+    font-family: 'inter', sans-serif;
 }
 img {
     max-width: 100%;
@@ -29,7 +39,7 @@ a {
 
 
 .container {
-    background: var(--off-white);
+    padding: 1.25rem .75rem;
 }
 
 .opacity-BG {
@@ -42,42 +52,109 @@ a {
     position: fixed;
 }
 
+
+
 /*------- BLOCKS / COMPONENTS -------*/
 
-.header {
+/* .topnav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem .75rem;
+} */
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.topnav__logo {
+    width: 2.81106rem;
+    height: 1.75rem;
+}
+.topnav__btn {
+    background: none;
+}
+.topnav__menu {
+    background: var(--off-white);
+    width: 100%;
+    max-width: 250px;
+    position: fixed;
+    inset: 0 0 0 auto;
+    padding: 1.25rem 1.5rem;
+
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
+
+    @media (prefers-reduced-motion) {
+        opacity: 1;
+    }
+}
+@media (prefers-reduced-motion) {
+    .header__menu {
+        translate: 0;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+}
+.active {
+    translate: 0;
+}
+.topnav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+}
+
+.btn {
+    border: none;
+}
+.btn__close {
+    display: block;
+    /* margin-inline-start: auto;
+    margin-block-end: 8rem; */
+    margin: 0 0 8rem auto;
+}
+
+.main {
+    margin: 1.5rem 0 0 0;
+}
+
+.paragraph {
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.625rem;
 }
 
 /*------- ELEMENTS -------*/
 /* no standalone meaning - semantically tied to the block */
-/* does not represent structure, not header__nav__btn */
+/* does not represent structure, not topnav__nav__btn */
 
-/*------- header -------*/
-.header__logo {
+/*------- topnav -------*/
+
+
+/* .topnav__logo {
     width: 2.81106rem;
     height: 1.75rem;
 }
 
-.header__nav {
+.topnav__nav {
     z-index: 1;
 }
 
-.header__btn {
+.topnav__btn {
     position: relative;
     z-index: 100;
     background: none;
     border: none;
 }
-.header__icon {
+.topnav__icon {
     width: 30px;
     height: 25px;
-    /* 32, 31, 40, 17 */
 }
 
-.header__menu {
+.topnav__menu {
     background: var(--off-white);
     height: 100%;
     width: 100%;
@@ -89,36 +166,40 @@ a {
     padding: 6rem 1.5rem 0;
     transition: all .3s ease-in-out;
 }
-.header__menu.active {
+.topnav__menu.active {
     right: 0;
 }
 
-.header__list {
+.topnav__list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     list-style-type: none;
-}
+} */
 
 /*------- MODIFIERS -------*/
 /* incremental style changes */
-/* ex: header__btn--border-lg */
+/* ex: topnav__btn--border-lg */
 
-/*------- header -------*/
+/*------- topnav -------*/
 
 /* modifier or element? */
-.header__icon--close.hide {
+/* .topnav__icon--close.hide {
     display: none;
 }
-.header__icon--ham.hide {
+.topnav__icon--ham.hide {
     display: none;
 }
 
-.header__anchor--dark {
+.topnav__anchor--dark {
     color: var(--very-dark-blue);
+} */
+
+/*------- main -------*/
+
+.paragraph--dark {
+    color: var(--dark-greyish-blue);
 }
-
-
 
 
 /*------- media queries -------*/
@@ -126,26 +207,27 @@ a {
 /* 768px = 48rem */
 @media (width >= 48rem) {
 
-    .opacity.activeBG {
+    .opacity-BG.activeBG {
         background: none;
         width: auto;
         height: auto;
         position: static;
     }
 
-    /*------- header -------*/
-    .header__btn {
+    /*------- topnav -------*/
+    .topnav__btn {
         display: none;
     }
-    .header__menu {
+    .topnav__menu {
         height: auto;
         width: auto;
         max-width: 100%;
         position: static;
         padding: 1.5rem;
+        translate: 0;
         transition: none;
     }
-    .header__list {
+    .topnav__list {
         flex-direction: row;
         align-items: center;
         gap: 1rem;

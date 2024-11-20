@@ -16,39 +16,62 @@
   </style>
 </head>
 <body>
+
+  <div class="opacity-BG"></div>
+
   <div class="container">
 
-    <div class="opacity-BG"></div>
+    <!-- topnav start -->
+    <header class="topnav">
 
-    <header class="header">
-      <a href="#"><img class="header__logo" src="assets/images/logo.svg" alt=""></a>
+      <a href="#"><img class="topnav__logo" src="assets/images/logo.svg" alt="logo"></a>
 
-      <nav class="header__nav">
-        <button class="header__btn">
-          <img class="header__icon header__icon--close hide" src="assets/images/icon-menu-close.svg" alt="">
-          <img class="header__icon header__icon--ham" src="assets/images/icon-menu.svg" alt="">
+      <nav class="topnav__nav">
+
+        <span id="nav-label" hidden>Navigation</span>
+        <button id="btn-Open" class="btn topnav__btn" aria-expanded="false" aria-labelledby="nav-label">
+          <img class="topnav__icon topnav__icon--ham" src="assets/images/icon-menu.svg" alt="ham menu icon" width="40" height="17">
         </button>
-        <div class="header__menu">
-          <ul class="header__list">
-            <li><a class="header__anchor--dark" href="#">Home</a></li>
-            <li><a class="header__anchor--dark" href="#">New</a></li>
-            <li><a class="header__anchor--dark" href="#">Popular</a></li>
-            <li><a class="header__anchor--dark" href="#">Trending</a></li>
-            <li><a class="header__anchor--dark" href="#">Categories</a></li>
+
+        <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+          <button id="btn-Close" class="btn btn__close topnav__btn" aria-label="Close">
+            <img class="topnav__icon topnav__icon--close hide" src="assets/images/icon-menu-close.svg" alt="" width="32" height="31">
+          </button>
+          <ul class="topnav__list">
+            <li><a class="topnav__anchor--dark" href="#">Home</a></li>
+            <li><a class="topnav__anchor--dark" href="#">New</a></li>
+            <li><a class="topnav__anchor--dark" href="#">Popular</a></li>
+            <li><a class="topnav__anchor--dark" href="#">Trending</a></li>
+            <li><a class="topnav__anchor--dark" href="#">Categories</a></li>
           </ul>
         </div>
+
       </nav>
     </header>
+    <!-- topnav end -->
+
+    <!-- main start -->
+    <main class="main">
+
+      <img 
+      srcset="assets/images/image-web-3-desktop.jpg 1460w,
+              assets/images/image-web-3-mobile.jpg 686w" 
+      src="assets/images/image-web-3-mobile.jpg" 
+      alt="abstract web 3 image"
+      />
+      <h1 class="main__heading">The Bright Future of Web 3.0?</h1>
+      <div class="main__info">
+        <p class="paragraph paragraph--dark">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?</p>
+        <button>Read more</button>
+      </div>
+
+    </main>
+    <!-- main end -->
 
   </div>
 
   <!--  
-    The Bright Future of Web 3.0?
-
-    We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-    But is it really fulfilling its promise?
-
-    Read more
 
     New 
 
@@ -80,5 +103,6 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
 </body>
 </html>
