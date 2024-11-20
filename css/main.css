@@ -138,10 +138,40 @@ a {
     }
 }
 
+.new {
+    background: var(--very-dark-blue);
+    display: grid;
+    gap: 1.5rem;
+    margin-block-start: 3rem;
+    padding: 1.5rem 1rem;
+
+    .new__heading {
+        color: var(--soft-orange);
+    }
+    .new__sub-heading {
+        color: var(--off-white);
+    }
+    .new__paragraph {
+        color: var(--off-white);
+        margin-block-start: .5rem;
+    }
+}
+
 .paragraph {
     font-size: .9375rem;
     font-weight: 400;
     line-height: 1.625rem;
+}
+
+.heading-two {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+.heading-three {
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.5rem; /* 120% */
 }
 
 /*------- ELEMENTS -------*/
@@ -166,6 +196,11 @@ a {
     color: var(--dark-greyish-blue);
 }
 
+/*------- main -------*/
+.new__article--border {
+    border-bottom: 1px solid var(--dark-greyish-blue);
+    padding-bottom: 1.5rem;
+}
 
 /*------- media queries -------*/
 
