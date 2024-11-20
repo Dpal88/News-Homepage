@@ -114,6 +114,30 @@ a {
     margin: 1.5rem 0 0 0;
 }
 
+.web {
+    display: grid;
+    gap: 1rem;
+
+    .web__heading {
+        color: var(--very-dark-blue);
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 2.5rem;
+    }
+    .web__btn {
+        color: var(--very-dark-blue);
+        background: var(--soft-red);
+        width: 11.5625rem;
+        height: 3rem;
+        margin-block-start: 1rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+        letter-spacing: 0.27344rem;
+        text-transform: uppercase;
+    }
+}
+
 .paragraph {
     font-size: .9375rem;
     font-weight: 400;
