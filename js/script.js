@@ -2,7 +2,7 @@ const btnOpen = document.querySelector('#btn-Open');
 const btnClose = document.querySelector('#btn-Close');
 
 const topNavMenu = document.querySelector('.topnav__menu');
-const opacityDiv = document.querySelector('.opacity-BG');
+const overlay = document.querySelector('.overlay');
 
 const media = window.matchMedia('(width < 48em)')
 
@@ -22,7 +22,7 @@ function openMobileMenu() {
     btnClose.focus();
 
     topNavMenu.classList.add('active');
-    opacityDiv.classList.add('activeBG');
+    overlay.classList.add('overlayActive');
 }
 
 function closeMobileMenu() {
@@ -36,7 +36,7 @@ function closeMobileMenu() {
     btnOpen.focus();
 
     topNavMenu.classList.remove('active');
-    opacityDiv.classList.remove('activeBG');
+    overlay.classList.remove('overlayActive');
 
     // when mobile menu is closed we want to cancel out the transition again,
     // but only after 500 ms so that it happens only after the sliding animation is complete.
