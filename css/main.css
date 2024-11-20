@@ -142,7 +142,7 @@ a {
     background: var(--very-dark-blue);
     display: grid;
     gap: 1.5rem;
-    margin-block-start: 3rem;
+    margin-block-start: 4rem;
     padding: 1.5rem 1rem;
 
     .new__heading {
@@ -154,6 +154,35 @@ a {
     .new__paragraph {
         color: var(--off-white);
         margin-block-start: .5rem;
+    }
+}
+
+.tech {
+    display: grid;
+    gap: 1.5rem;
+    margin-block-start: 4rem;
+
+    .tech__article {
+        display: flex;
+        gap: 1.5rem;
+    }
+    .tech__img {
+        max-width: 12.1875rem;
+        max-height: 8.125rem;
+    }
+    .tech__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .tech__heading {
+        color: var(--soft-red);
+    }
+    .tech__sub-heading {
+        color: var(--very-dark-blue);
+    }
+    .tech__paragraph {
+        color: var(--dark-greyish-blue);
     }
 }
 
