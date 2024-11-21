@@ -239,8 +239,6 @@ button {
 /*------- MODIFIERS -------*/
 /* incremental style changes */
 
-
-
 .paragraph--dark {
     color: var(--dark-greyish-blue);
 }
@@ -312,8 +310,6 @@ button {
     .main {
         max-width: 70rem;
         display: grid;
-        /* grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr .5fr; */
         grid-template-areas: 
         "web web new"
         "web web new"
@@ -368,7 +364,6 @@ button {
 
         .tech__article {
             display: grid;
-            /* grid-template-columns: repeat(2, 1fr); */
             grid-template-columns: 100px 1fr;
 
             .tech__img {
@@ -381,7 +376,7 @@ button {
     }
 
 }
-/* 900px = 56.25rem */
+
 /* 840px = 52.5rem */
 @media (width >= 52.5rem) {
     .web {

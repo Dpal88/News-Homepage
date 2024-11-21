@@ -16,8 +16,10 @@ function openMobileMenu() {
     topNavMenu.removeAttribute('style');
     // set main to inert so it's inaccessible from screen readers and keyboards
     main.setAttribute('inert', '');
+
     // locks scrolling when menu is open
     // bodyScrollLockUpgrade.disableBodyScroll(body);
+
     // when keyboard is used to open menu, focus on btnClose button.
     btnClose.focus();
 
@@ -30,9 +32,11 @@ function closeMobileMenu() {
     topNavMenu.setAttribute('inert', '');
     
     main.removeAttribute('inert');
+
     // unlocks scrolling when menu is closed
     // getting erorr
     // bodyScrollLockUpgrade.enableBodyScroll(body);
+    
     // when keyboard is used to close menu, focus on btnOpen button.
     btnOpen.focus();
 
