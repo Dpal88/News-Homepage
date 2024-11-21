@@ -29,7 +29,8 @@ body {
     background: var(--off-white);
     font-family: 'inter', sans-serif;
 }
-img {
+img,
+picture {
     max-width: 100%;
     display: block;
 }
@@ -99,6 +100,7 @@ button {
 .active {
     translate: 0;
 }
+
 .topnav__list {
     display: flex;
     flex-direction: column;
@@ -109,6 +111,7 @@ button {
 .topnav__anchor:hover {
     color: var(--soft-red);
 }
+
 
 .btn {
     border: none;
@@ -156,7 +159,7 @@ button {
     background: var(--very-dark-blue);
     display: grid;
     gap: 1.5rem;
-    margin-block-start: 4rem;
+    margin-block-start: 3.5rem;
     padding: 1.5rem 1rem;
 
     .new__heading {
@@ -177,7 +180,7 @@ button {
 .tech {
     display: grid;
     gap: 1.5rem;
-    margin-block-start: 4rem;
+    margin-block-start: 3.5rem;
 
     .tech__article {
         display: flex;
@@ -257,15 +260,14 @@ button {
 
 /* 768px = 48rem */
 
-/* 1280px = 80rem */
-@media (width >= 80rem) {
+@media (width >= 48rem) {
 
     .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        padding: 1.25rem 2rem;
     }
 
     .overlay.overlayActive {
@@ -279,6 +281,10 @@ button {
     .topnav {
         max-width: 70rem;
         width: 100%;
+    }
+    .topnav__logo {
+        width: 4.00575rem;
+        height: 2.49375rem;
     }
     .topnav__btn {
         display: none;
@@ -319,6 +325,7 @@ button {
 
         .web__flex {
             display: flex;
+            gap: 1rem;
 
             .web__heading {
                 flex-basis: 50%;
@@ -346,8 +353,22 @@ button {
 
     .tech {
         grid-area: tech;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         margin-block-start: 0;
+
+        .tech__article {
+            display: grid;
+            /* grid-template-columns: repeat(2, 1fr); */
+            grid-template-columns: 100px 1fr;
+
+            .tech__img {
+                height: 100%;
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
     }
 
 }

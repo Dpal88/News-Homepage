@@ -26,7 +26,7 @@
 
       <a href="#"><img class="topnav__logo" src="assets/images/logo.svg" alt="logo"></a>
 
-      <nav class="topnav__nav">
+      <nav>
 
         <span id="nav-label" hidden>Navigation</span>
         <button id="btn-Open" class="btn topnav__btn" aria-expanded="false" aria-labelledby="nav-label">
@@ -54,12 +54,16 @@
     <main class="main">
 
       <section class="web" aria-labelledby="web-heading">
-        <img 
+        <!-- <img 
         srcset="assets/images/image-web-3-desktop.jpg 1460w,
                 assets/images/image-web-3-mobile.jpg 686w" 
         src="assets/images/image-web-3-mobile.jpg" 
         alt="abstract web 3 image"
-        />
+        /> -->
+        <picture>
+          <source media="(max-width: 1100px)" srcset="assets/images/image-web-3-mobile.jpg">
+          <img src="assets/images/image-web-3-desktop.jpg" alt="">
+        </picture>
         <div class="web__flex">
           <h1 id="web-heading" class="web__heading">The Bright Future of Web 3.0?</h1>
           <div class="web__info">
