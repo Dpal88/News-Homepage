@@ -107,6 +107,9 @@ button {
         list-style: none;
     }
     
+    .topnav__anchor {
+        color: var(--very-dark-blue);
+    }
     .topnav__anchor:hover {
         color: var(--soft-red);
     }
@@ -126,6 +129,8 @@ button {
 .main {
     margin: 1.5rem 0 0 0;
 }
+
+/*------- WEB -------*/
 
 .web {
     display: grid;
@@ -156,6 +161,8 @@ button {
     }
 }
 
+/*------- NEW -------*/
+
 .new {
     background: var(--very-dark-blue);
     display: grid;
@@ -177,6 +184,8 @@ button {
         margin-block-start: .5rem;
     }
 }
+
+/*------- TECH -------*/
 
 .tech {
     display: grid;
@@ -226,20 +235,11 @@ button {
     line-height: 1.5rem; /* 120% */
 }
 
-/*------- ELEMENTS -------*/
-/* no standalone meaning - semantically tied to the block */
-/* does not represent structure, not topnav__nav__btn */
-
-
 
 /*------- MODIFIERS -------*/
 /* incremental style changes */
-/* ex: topnav__btn--border-lg */
 
 
-.topnav__anchor--dark {
-    color: var(--very-dark-blue);
-}
 
 .paragraph--dark {
     color: var(--dark-greyish-blue);
@@ -301,6 +301,9 @@ button {
             align-items: center;
             gap: 1rem;
         }
+        .topnav__anchor {
+            color: var(--dark-greyish-blue);
+        }
     }
     
 
@@ -337,7 +340,7 @@ button {
             .web__info {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: center;
                 flex-basis: 50%;
             }
         }
@@ -377,4 +380,16 @@ button {
         }
     }
 
+}
+/* 900px = 56.25rem */
+/* 840px = 52.5rem */
+@media (width >= 52.5rem) {
+    .web {
+        .web__flex {
+
+            .web__info {
+                justify-content: space-between;
+            }
+        }
+    }
 }
