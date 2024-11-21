@@ -67,50 +67,51 @@ button {
     justify-content: space-between;
     align-items: center;
 
-}
-.topnav__logo {
-    width: 2.81106rem;
-    height: 1.75rem;
-}
-.topnav__btn {
-    background: none;
-}
-.topnav__menu {
-    background: var(--off-white);
-    width: 100%;
-    max-width: 250px;
-    position: fixed;
-    inset: 0 0 0 auto;
-    padding: 1.25rem 1.5rem;
-
-    translate: 100vw 0;
-    transition: translate 0.5s ease-in-out;
-
+    .topnav__logo {
+        width: 2.81106rem;
+        height: 1.75rem;
+    }
+    .topnav__btn {
+        background: none;
+    }
+    .topnav__menu {
+        background: var(--off-white);
+        width: 100%;
+        max-width: 250px;
+        position: fixed;
+        inset: 0 0 0 auto;
+        padding: 1.25rem 1.5rem;
+    
+        translate: 100vw 0;
+        transition: translate 0.5s ease-in-out;
+    
+        @media (prefers-reduced-motion) {
+            opacity: 1;
+        }
+    }
     @media (prefers-reduced-motion) {
-        opacity: 1;
+        .header__menu {
+            translate: 0;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+        }
     }
-}
-@media (prefers-reduced-motion) {
-    .header__menu {
+    .active {
         translate: 0;
-        opacity: 0;
-        transition: opacity .5s ease-in-out;
+    }
+    
+    .topnav__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style: none;
+    }
+    
+    .topnav__anchor:hover {
+        color: var(--soft-red);
     }
 }
-.active {
-    translate: 0;
-}
 
-.topnav__list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    list-style: none;
-}
-
-.topnav__anchor:hover {
-    color: var(--soft-red);
-}
 
 
 .btn {
@@ -218,6 +219,7 @@ button {
     font-weight: 700;
     line-height: 2rem;
 }
+
 .heading-three {
     font-size: 1.125rem;
     font-weight: 800;
@@ -234,19 +236,15 @@ button {
 /* incremental style changes */
 /* ex: topnav__btn--border-lg */
 
-/*------- topnav -------*/
 
 .topnav__anchor--dark {
     color: var(--very-dark-blue);
 }
 
-/*------- main -------*/
-
 .paragraph--dark {
     color: var(--dark-greyish-blue);
 }
 
-/*------- main -------*/
 .new__article--border {
     border-bottom: 1px solid var(--dark-greyish-blue);
     padding-bottom: 1.5rem;
@@ -267,7 +265,7 @@ button {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 1.25rem 2rem;
+        padding: 4rem 2rem;
     }
 
     .overlay.overlayActive {
@@ -277,34 +275,36 @@ button {
         position: static;
     }
 
-    /*------- topnav -------*/
+    /*------- TOPNAV -------*/
     .topnav {
         max-width: 70rem;
         width: 100%;
-    }
-    .topnav__logo {
-        width: 4.00575rem;
-        height: 2.49375rem;
-    }
-    .topnav__btn {
-        display: none;
-    }
-    .topnav__menu {
-        height: auto;
-        width: auto;
-        max-width: 100%;
-        position: static;
-        padding: 0;
-        translate: 0;
-        transition: none;
-    }
-    .topnav__list {
-        flex-direction: row;
-        align-items: center;
-        gap: 1rem;
-    }
 
-    /*------- web -------*/
+        .topnav__logo {
+            width: 4.00575rem;
+            height: 2.49375rem;
+        }
+        .topnav__btn {
+            display: none;
+        }
+        .topnav__menu {
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            position: static;
+            padding: 0;
+            translate: 0;
+            transition: none;
+        }
+        .topnav__list {
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+    
+
+    /*------- MAIN -------*/
 
     .main {
         max-width: 70rem;
@@ -318,6 +318,8 @@ button {
         ;
         gap: 4rem 1.5rem;
     }
+
+    /*------- WEB -------*/
 
     .web {
         gap: 2rem;
@@ -341,6 +343,8 @@ button {
         }
     }
 
+    /*------- NEW -------*/
+
     .new {
         grid-area: new;
         margin-block-start: 0;
@@ -350,6 +354,8 @@ button {
             line-height: 2.5rem;
         }
     }
+
+    /*------- TECH -------*/
 
     .tech {
         grid-area: tech;

@@ -17,7 +17,7 @@ function openMobileMenu() {
     // set main to inert so it's inaccessible from screen readers and keyboards
     main.setAttribute('inert', '');
     // locks scrolling when menu is open
-    bodyScrollLockUpgrade.disableBodyScroll(body);
+    // bodyScrollLockUpgrade.disableBodyScroll(body);
     // when keyboard is used to open menu, focus on btnClose button.
     btnClose.focus();
 
