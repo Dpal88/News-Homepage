@@ -142,19 +142,23 @@ button {
         font-weight: 800;
         line-height: 2.5rem;
     }
-    .web__btn {
+    .web__anchor {
         color: var(--very-dark-blue);
         background: var(--soft-red);
+        display: block;
         width: 11.5625rem;
         height: 3rem;
         margin-block-start: 1rem;
+        padding: 15px;
+        text-align: center;
+        align-content: center;
         font-size: 0.875rem;
         font-weight: 700;
         line-height: 1.5rem;
         letter-spacing: 0.27344rem;
         text-transform: uppercase;
     }
-    .web__btn:hover {
+    .web__anchor:hover {
         color: var(--off-white);
         background: var(--very-dark-blue);
         transform: translateY(4px);
